@@ -7,8 +7,8 @@ export interface ContactConfig {
 /**
  * Datos centrales de contacto del Estudio Jurídico Lachat.
  *
- * Mantener estos valores centralizados evita duplicar información sensible
- * en componentes, secciones o botones comerciales.
+ * Mantener esta información centralizada evita duplicar datos de contacto
+ * en componentes, secciones y llamados a la acción.
  */
 export const contact: ContactConfig = {
   whatsappNumber: "542983406416",
@@ -20,10 +20,8 @@ export const defaultWhatsappMessage =
   "Hola, quisiera consultar por asesoramiento en contratos, locaciones, arrendamientos o intimaciones.";
 
 /**
- * Construye una URL válida de WhatsApp con un mensaje codificado.
- *
- * Esta función permite que cada CTA de la landing tenga un mensaje contextual
- * sin repetir la lógica de encoding ni el número de contacto.
+ * Construye una URL válida de WhatsApp usando el número del estudio y un
+ * mensaje codificado para URL.
  */
 export function buildWhatsAppUrl(message = defaultWhatsappMessage): string {
   const encodedMessage = encodeURIComponent(message);
@@ -32,12 +30,12 @@ export function buildWhatsAppUrl(message = defaultWhatsappMessage): string {
 }
 
 /**
- * URL principal de WhatsApp usada por CTAs genéricos de la landing.
+ * URL principal de WhatsApp para CTAs generales.
  */
 export const whatsappUrl = buildWhatsAppUrl();
 
 /**
- * URL principal de email con asunto predefinido para consultas legales.
+ * URL principal de email con asunto predefinido.
  */
 export const emailUrl = `mailto:${contact.email}?subject=${encodeURIComponent(
   "Consulta legal - Estudio Lachat",

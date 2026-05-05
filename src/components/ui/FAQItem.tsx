@@ -1,18 +1,15 @@
-export interface FAQItemData {
-  q: string;
-  a: string;
-}
+import type { FAQ } from "@/data/faqs";
 
 interface FAQItemProps {
-  item: FAQItemData;
+  item: FAQ;
 }
 
 /**
- * Renderiza un ítem individual de preguntas frecuentes usando HTML semántico nativo.
+ * Ítem individual de preguntas frecuentes.
  *
- * Se utiliza `<details>` y `<summary>` para evitar estado innecesario en React,
- * manteniendo el componente como Server Component y mejorando accesibilidad,
- * rendimiento y simplicidad.
+ * Usa `<details>` y `<summary>` nativos para resolver el comportamiento
+ * desplegable sin estado React, evitando convertirlo en Client Component.
+ * Esto mejora rendimiento, accesibilidad y simplicidad.
  */
 export default function FAQItem({ item }: FAQItemProps) {
   return (

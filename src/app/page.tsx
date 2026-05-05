@@ -1,5 +1,9 @@
+import Approach from "@/components/sections/Approach";
+import CommonSituations from "@/components/sections/CommonSituations";
 import ContactForm from "@/components/sections/ContactForm";
+import FAQ from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
+import Process from "@/components/sections/Process";
 import Services from "@/components/sections/Services";
 
 /**
@@ -14,6 +18,14 @@ export default function Home() {
       <Hero />
 
       <Services />
+
+      <Approach />
+
+      <CommonSituations />
+
+      <Process />
+
+      <FAQ />
 
       <section
         id="contacto"

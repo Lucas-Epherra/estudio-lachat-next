@@ -1,36 +1,34 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
+
 import "./globals.css";
 
-// Importamos nuestros nuevos componentes modulares
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Estudio Jurídico Lachat | Asesoramiento Legal",
-  description: "Asesoramiento legal claro para contratos, locaciones y reclamos. Enfoque boutique y profesional.",
+  title: "Estudio Jurídico Lachat",
+  description:
+    "Asesoramiento legal claro para contratos, locaciones, arrendamientos e intimaciones.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+/**
+ * Layout raíz de la aplicación.
+ *
+ * Define la estructura persistente del sitio con navegación, contenido,
+ * botón flotante de WhatsApp y footer institucional.
+ */
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
-      <body className={`${inter.className} antialiased flex flex-col min-h-screen`}>
-        {/* El Navbar siempre arriba */}
+      <body className="min-h-screen bg-brand-cream text-brand-dark antialiased">
         <Navbar />
-        
-        {/* El contenido de cada página (page.tsx) se inyecta aquí. 
-            El flex-grow asegura que el footer se empuje siempre hacia abajo si hay poco contenido */}
-        <main className="grow">
-          {children}
-        </main>
-
-        {/* El Footer siempre abajo */}
+        {children}
+        <FloatingWhatsApp />
         <Footer />
       </body>
     </html>

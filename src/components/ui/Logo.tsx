@@ -1,28 +1,78 @@
+import Image from "next/image";
+import Link from "next/link";
+
 interface LogoProps {
   light?: boolean;
+  size?: "sm" | "md" | "lg";
+  href?: string;
 }
 
 /**
- * Logo textual del Estudio Jurídico Lachat.
+ * Logo del Estudio Jurídico Lachat.
  *
- * Soporta una variante `light` para adaptarse correctamente a fondos oscuros,
- * como footer o bloques de alto contraste, manteniendo la identidad editorial
- * del sitio.
+ * Mantiene la composición editorial original del proyecto y reemplaza únicamente
+ * la marca circular por el logo institucional real del estudio.
+ * Por defecto funciona como enlace interno al inicio de la landing.
  */
-export default function Logo({ light = false }: LogoProps) {
+export default function Logo({
+  light = false,
+  size = "md",
+  href = "/",
+}: LogoProps) {
   const eyebrowColor = light ? "text-brand-cream/65" : "text-brand-dark/55";
   const titleColor = light ? "text-brand-cream" : "text-brand-dark";
+  const markBackground = light ? "bg-brand-cream" : "bg-brand-cream/80";
+
+  const sizeClasses = {
+    sm: {
+      mark: "h-10 w-10",
+      image: "40px",
+      eyebrow: "text-[8px]",
+      title: "text-lg",
+    },
+    md: {
+      mark: "h-11 w-11",
+      image: "44px",
+      eyebrow: "text-[9px]",
+      title: "text-xl",
+    },
+    lg: {
+      mark: "h-12 w-12",
+      image: "48px",
+      eyebrow: "text-[10px]",
+      title: "text-2xl",
+    },
+  } satisfies Record<
+    NonNullable<LogoProps["size"]>,
+    {
+      mark: string;
+      image: string;
+      eyebrow: string;
+      title: string;
+    }
+  >;
+
+  const selectedSize = sizeClasses[size];
 
   return (
-    <div className="flex items-center gap-3" aria-label="Estudio Jurídico Lachat">
+    <Link
+      href={href}
+      aria-label="Ir al inicio de Estudio Jurídico Lachat"
+      className="flex w-fit items-center gap-3 transition-opacity duration-300 hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream"
+    >
       <div
-        className={[
-          "relative grid h-11 w-11 place-items-center rounded-full border border-brand-gold/50",
-          light ? "bg-brand-cream" : "bg-brand-cream/80",
-        ].join(" ")}
         aria-hidden="true"
+        className={`relative grid ${selectedSize.mark} place-items-center rounded-full border border-brand-gold/50 ${markBackground}`}
       >
-        <span className="font-serif text-2xl text-brand-dark">L</span>
+        <div className="relative h-full w-full overflow-hidden rounded-full">
+          <Image
+            src="/logo-lachat.jpeg"
+            alt=""
+            fill
+            sizes={selectedSize.image}
+            className="object-cover"
+          />
+        </div>
 
         <span className="absolute -right-1 -top-1 text-[10px] text-brand-gold">
           ✦
@@ -30,14 +80,18 @@ export default function Logo({ light = false }: LogoProps) {
       </div>
 
       <div className="leading-none">
-        <p className={`text-[9px] uppercase tracking-[0.34em] ${eyebrowColor}`}>
+        <p
+          className={`${selectedSize.eyebrow} uppercase tracking-[0.34em] ${eyebrowColor}`}
+        >
           Estudio Jurídico
         </p>
 
-        <p className={`mt-1 font-serif text-xl tracking-[0.22em] ${titleColor}`}>
+        <p
+          className={`mt-1 font-serif ${selectedSize.title} tracking-[0.22em] ${titleColor}`}
+        >
           LACHAT
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
