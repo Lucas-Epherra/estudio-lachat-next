@@ -1,65 +1,64 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen font-sans selection:bg-brand-gold/30">
+      
+      {/* Hero Section con Estética Editorial */}
+      <main className="max-w-6xl mx-auto px-6 py-24 md:py-32">
+        <div className="space-y-6 max-w-4xl">
+          <span className="text-brand-gold text-sm font-bold tracking-[0.12em] uppercase">
+            Estudio Jurídico Lachat
+          </span>
+          
+          <h1 className="font-serif text-brand-dark text-5xl md:text-7xl leading-[1.1] tracking-tight">
+            Asesoramiento legal claro para contratos, locaciones y reclamos.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <p className="text-brand-dark/70 text-lg md:text-xl max-w-2xl leading-relaxed">
+            Brindamos soluciones legales con un enfoque boutique, priorizando la claridad y el respaldo profesional en cada paso.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+          <div className="pt-6 flex gap-4">
+            <button className="bg-brand-dark text-brand-surface px-8 py-4 rounded-full font-bold hover:opacity-90 transition-all">
+              Consultar Ahora
+            </button>
+            <button className="border border-brand-dark/20 px-8 py-4 rounded-full font-bold hover:bg-brand-dark/5 transition-all">
+              Saber más
+            </button>
+          </div>
         </div>
       </main>
+
+      {/* Sección de Servicios - Grid Limpio */}
+      <section className="bg-brand-surface/50 border-y border-brand-dark/5 py-24 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+          
+          <div className="group space-y-4">
+            <div className="text-brand-gold font-bold text-lg tracking-tighter">01</div>
+            <h3 className="font-serif text-2xl text-brand-dark">Locaciones urbanas</h3>
+            <p className="text-brand-dark/60 leading-relaxed">
+              Gestión integral de alquileres, contratos y resolución de conflictos.
+            </p>
+          </div>
+
+          <div className="group space-y-4">
+            <div className="text-brand-gold font-bold text-lg tracking-tighter">02</div>
+            <h3 className="font-serif text-2xl text-brand-dark">Contratos comerciales</h3>
+            <p className="text-brand-dark/60 leading-relaxed">
+              Redacción y revisión de acuerdos para proteger los intereses de tu negocio.
+            </p>
+          </div>
+
+          <div className="group space-y-4">
+            <div className="text-brand-gold font-bold text-lg tracking-tighter">03</div>
+            <h3 className="font-serif text-2xl text-brand-dark">Arrendamientos</h3>
+            <p className="text-brand-dark/60 leading-relaxed">
+              Asesoramiento especializado en arrendamientos rurales y comerciales.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
     </div>
   );
 }
