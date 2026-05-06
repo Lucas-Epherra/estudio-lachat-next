@@ -1,3 +1,4 @@
+import About from "@/components/sections/About";
 import Approach from "@/components/sections/Approach";
 import CommonSituations from "@/components/sections/CommonSituations";
 import ContactSection from "@/components/sections/ContactSection";
@@ -15,6 +16,8 @@ import Services from "@/components/sections/Services";
 export default function Home() {
   return (
     <main>
+      <div id="inicio" className="scroll-mt-28" />
+
       <Hero />
 
       <Services />
@@ -24,6 +27,8 @@ export default function Home() {
       <CommonSituations />
 
       <Process />
+
+      <About />
 
       <FAQ />
 
