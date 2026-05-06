@@ -1,25 +1,16 @@
 import Link from "next/link";
 
+import MobileMenu from "@/components/layout/MobileMenu";
 import Logo from "@/components/ui/Logo";
 import { whatsappUrl } from "@/config/contact";
-
-interface NavItem {
-  label: string;
-  href: string;
-}
-
-const navItems: NavItem[] = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Método", href: "#metodo" },
-  { label: "Preguntas", href: "#faq" },
-  { label: "Contacto", href: "#contacto" },
-];
+import { navItems } from "@/data/navItems";
 
 /**
  * Barra de navegación principal de la landing.
  *
- * Mantiene una estructura simple, semántica y orientada a conversión.
- * En mobile prioriza identidad de marca y CTA compacto para evitar overflow.
+ * Mantiene una estructura semántica, server-first y orientada a conversión.
+ * En desktop muestra navegación completa y CTA directo. En mobile delega la
+ * interacción al componente hoja MobileMenu.
  */
 export default function Navbar() {
   return (
@@ -31,7 +22,7 @@ export default function Navbar() {
 
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-10 md:flex"
+          className="hidden items-center gap-7 lg:gap-10 md:flex"
         >
           {navItems.map((item) => (
             <Link
@@ -48,10 +39,12 @@ export default function Navbar() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 rounded-full bg-brand-dark px-5 py-3 text-[0.68rem] font-bold uppercase tracking-[0.16em] text-brand-surface transition duration-300 hover:-translate-y-0.5 hover:bg-brand-dark/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream sm:px-7 sm:text-xs"
+          className="hidden shrink-0 rounded-full bg-brand-dark px-7 py-3 text-xs font-bold uppercase tracking-[0.16em] text-brand-surface transition duration-300 hover:-translate-y-0.5 hover:bg-brand-dark/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream md:inline-flex"
         >
           Consultar
         </a>
+
+        <MobileMenu />
       </div>
     </header>
   );
