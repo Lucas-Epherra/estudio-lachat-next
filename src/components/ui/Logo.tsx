@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
@@ -10,9 +9,9 @@ interface LogoProps {
 /**
  * Logo del Estudio Jurídico Lachat.
  *
- * Mantiene la composición editorial original del proyecto y reemplaza únicamente
- * la marca circular por el logo institucional real del estudio.
- * Por defecto funciona como enlace interno al inicio de la landing.
+ * Mantiene la composición editorial original del proyecto y usa el logo real
+ * del estudio dentro de la marca circular. Funciona como enlace interno al
+ * inicio de la landing.
  */
 export default function Logo({
   light = false,
@@ -26,29 +25,29 @@ export default function Logo({
   const sizeClasses = {
     sm: {
       mark: "h-10 w-10",
-      image: "40px",
-      eyebrow: "text-[8px]",
-      title: "text-lg",
+      eyebrow: "text-[7px]",
+      title: "text-[1.05rem]",
+      gap: "gap-2",
     },
     md: {
       mark: "h-11 w-11",
-      image: "44px",
       eyebrow: "text-[9px]",
       title: "text-xl",
+      gap: "gap-3",
     },
     lg: {
       mark: "h-12 w-12",
-      image: "48px",
       eyebrow: "text-[10px]",
       title: "text-2xl",
+      gap: "gap-3",
     },
   } satisfies Record<
     NonNullable<LogoProps["size"]>,
     {
       mark: string;
-      image: string;
       eyebrow: string;
       title: string;
+      gap: string;
     }
   >;
 
@@ -58,21 +57,19 @@ export default function Logo({
     <Link
       href={href}
       aria-label="Ir al inicio de Estudio Jurídico Lachat"
-      className="flex w-fit items-center gap-3 transition-opacity duration-300 hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream"
+      className={`flex w-fit items-center ${selectedSize.gap} transition-opacity duration-300 hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream`}
     >
       <div
         aria-hidden="true"
-        className={`relative grid ${selectedSize.mark} place-items-center rounded-full border border-brand-gold/50 ${markBackground}`}
+        className={`relative grid ${selectedSize.mark} place-items-center overflow-hidden rounded-full border border-brand-gold/50 ${markBackground}`}
       >
-        <div className="relative h-full w-full overflow-hidden rounded-full">
-          <Image
-            src="/logo-lachat.jpeg"
-            alt=""
-            fill
-            sizes={selectedSize.image}
-            className="object-cover"
-          />
-        </div>
+        <img
+          src="/images/brand/logo-lachat.jpeg"
+          alt=""
+          className="h-full w-full rounded-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
 
         <span className="absolute -right-1 -top-1 text-[10px] text-brand-gold">
           ✦

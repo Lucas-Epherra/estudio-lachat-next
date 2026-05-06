@@ -26,7 +26,7 @@ const footerLinks: FooterLink[] = [
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-brand-cream">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-6 pt-16 pb-28 lg:py-20">
         <div className="grid gap-12 border-b border-brand-surface/10 pb-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
           <div>
             <Logo light size="lg" />

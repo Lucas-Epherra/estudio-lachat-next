@@ -28,7 +28,7 @@ export default function Hero() {
         <div>
           <Label>Contratos, locaciones y consultas legales remotas</Label>
 
-          <h1 className="mt-8 max-w-4xl font-serif text-4xl font-semibold leading-[0.98] tracking-tight text-brand-dark sm:text-5xl lg:text-6xl">
+          <h1 className="mt-8 max-w-4xl font-serif text-[2.35rem] font-semibold leading-[0.98] tracking-tight text-brand-dark sm:text-5xl lg:text-6xl">
             Asesoramiento legal claro para contratos, locaciones y reclamos.
           </h1>
 
