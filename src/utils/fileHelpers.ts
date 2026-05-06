@@ -5,7 +5,10 @@ interface BuildStoragePathParams {
 }
 
 /**
- * Normaliza nombres de archivo para evitar caracteres problemáticos en Storage.
+ * Normaliza nombres de archivo para evitar caracteres problemáticos en Supabase Storage.
+ *
+ * Elimina acentos, espacios y símbolos conflictivos, manteniendo la extensión
+ * original para facilitar la identificación del documento.
  */
 function sanitizeFileName(fileName: string): string {
   const extension = fileName.includes(".")
@@ -25,10 +28,11 @@ function sanitizeFileName(fileName: string): string {
 }
 
 /**
- * Construye una ruta estable para guardar adjuntos en Supabase Storage.
+ * Construye una ruta compatible con la policy actual de Supabase Storage.
  *
- * Agrupar por `submissionId` permite relacionar fácilmente los archivos con
- * una consulta específica sin exponer datos personales en el path.
+ * La policy existente permite uploads públicos únicamente en rutas que empiezan
+ * con `consultas/`, por eso mantenemos esa carpeta para no romper el circuito
+ * ya configurado de archivos, email y Google Sheets.
  */
 export function buildStoragePath({
   submissionId,
@@ -37,5 +41,5 @@ export function buildStoragePath({
 }: BuildStoragePathParams): string {
   const safeFileName = sanitizeFileName(fileName);
 
-  return `contact-requests/${submissionId}/${index + 1}-${safeFileName}`;
+  return `consultas/${submissionId}/${index + 1}-${safeFileName}`;
 }

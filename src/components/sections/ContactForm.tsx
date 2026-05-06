@@ -190,10 +190,13 @@ export default function ContactForm() {
     } catch (error) {
       console.error("Contact form submit error:", error);
 
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Error desconocido al enviar la consulta.";
+
       setStatus(FORM_STATUS.ERROR);
-      setFeedback(
-        "No pudimos enviar la consulta. Revisá los archivos o probá nuevamente.",
-      );
+      setFeedback(`No pudimos enviar la consulta: ${errorMessage}`);
     }
   }
 
@@ -360,11 +363,10 @@ export default function ContactForm() {
 
       {feedback && (
         <p
-          className={`rounded-2xl px-4 py-3 text-sm font-semibold leading-6 ${
-            status === FORM_STATUS.SUCCESS
-              ? "bg-emerald-900/10 text-emerald-800"
-              : "bg-red-900/10 text-red-800"
-          }`}
+          className={`rounded-2xl px-4 py-3 text-sm font-semibold leading-6 ${status === FORM_STATUS.SUCCESS
+            ? "bg-emerald-900/10 text-emerald-800"
+            : "bg-red-900/10 text-red-800"
+            }`}
           role="status"
           aria-live="polite"
         >
