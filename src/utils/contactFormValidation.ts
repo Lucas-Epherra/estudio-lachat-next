@@ -33,15 +33,19 @@ export function validateContactForm(
   }
 
   if (!form.fullName.trim()) {
-    return "Ingresá tu nombre y apellido.";
+    return "Ingresá tu nombre y apellido para que el estudio pueda identificar la consulta.";
   }
 
   if (!form.email.trim()) {
-    return "Ingresá tu email.";
+    return "Ingresá un email de contacto.";
   }
 
   if (!form.phone.trim()) {
-    return "Ingresá tu teléfono o WhatsApp.";
+    return "Ingresá un teléfono o WhatsApp para poder coordinar la respuesta.";
+  }
+
+  if (!form.caseType) {
+    return "Seleccioná el tipo de consulta.";
   }
 
   if (!form.message.trim()) {
@@ -60,7 +64,7 @@ export function validateContactForm(
         extension as (typeof ATTACHMENTS_CONFIG.ACCEPTED_EXTENSIONS)[number],
       )
     ) {
-      return `El archivo "${file.name}" no tiene un formato permitido.`;
+      return `El archivo "${file.name}" no tiene un formato permitido. Usá PDF, JPG, PNG, DOC o DOCX.`;
     }
 
     if (
@@ -69,7 +73,7 @@ export function validateContactForm(
         file.type as (typeof ATTACHMENTS_CONFIG.ACCEPTED_MIME_TYPES)[number],
       )
     ) {
-      return `El archivo "${file.name}" no tiene un tipo válido.`;
+      return `El archivo "${file.name}" no tiene un tipo válido. Probá exportarlo nuevamente o adjuntarlo en PDF.`;
     }
 
     if (file.size > ATTACHMENTS_CONFIG.MAX_FILE_SIZE_BYTES) {

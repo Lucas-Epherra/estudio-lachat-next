@@ -13,7 +13,7 @@ export interface ContactFormState {
   fullName: string;
   email: string;
   phone: string;
-  caseType: CaseType;
+  caseType: CaseType | "";
   message: string;
   company: string;
 }
@@ -24,12 +24,15 @@ export interface ContactFormState {
  * `company` funciona como honeypot anti-spam:
  * - Los usuarios reales no lo ven.
  * - Muchos bots lo completan automáticamente.
+ *
+ * `caseType` inicia vacío para obligar una selección consciente del tipo
+ * de consulta y evitar clasificaciones por defecto poco precisas.
  */
 export const INITIAL_CONTACT_FORM: ContactFormState = {
   fullName: "",
   email: "",
   phone: "",
-  caseType: CASE_TYPES[0],
+  caseType: "",
   message: "",
   company: "",
 };
@@ -56,8 +59,8 @@ export type ContactRequestStatus =
  * Configuración de adjuntos del formulario.
  *
  * Límites conservadores para MVP:
- * - máximo 3 archivos
- * - máximo 5 MB por archivo
+ * - máximo 3 archivos.
+ * - máximo 5 MB por archivo.
  * - formatos habituales para documentación legal.
  */
 export const ATTACHMENTS_CONFIG = {

@@ -182,7 +182,7 @@ export default function ContactForm() {
       setStatus(FORM_STATUS.SUCCESS);
       setFeedback(
         filePaths.length > 0
-          ? "Consulta enviada correctamente. El estudio recibió tu información y documentación."
+          ? "Consulta enviada correctamente. El estudio recibió tu información y la documentación adjunta."
           : "Consulta enviada correctamente. El estudio recibió tu información.",
       );
 
@@ -207,7 +207,7 @@ export default function ContactForm() {
       noValidate
     >
       <div
-        className="absolute -left-2499.75 h-px w-px opacity-0"
+        className="absolute -left-2499.75 h-px w-px overflow-hidden opacity-0"
         aria-hidden="true"
       >
         <label htmlFor="company">Empresa</label>
@@ -235,8 +235,8 @@ export default function ContactForm() {
         </h2>
 
         <p className="text-base leading-7 text-brand-dark/70">
-          Completá tus datos, contanos brevemente qué necesitás resolver y
-          adjuntá documentación si ya la tenés disponible.
+          Completá tus datos, describí brevemente la situación y adjuntá
+          documentación si ya la tenés disponible.
         </p>
       </div>
 
@@ -263,7 +263,7 @@ export default function ContactForm() {
             type="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="tuemail@email.com"
+            placeholder="Ej: nombre@email.com"
             autoComplete="email"
             required
           />
@@ -277,7 +277,7 @@ export default function ContactForm() {
             type="tel"
             value={form.phone}
             onChange={handleChange}
-            placeholder="Ej: +54 9 2983..."
+            placeholder="Ej: +54 9 2983 000000"
             autoComplete="tel"
             required
           />
@@ -292,6 +292,10 @@ export default function ContactForm() {
             onChange={handleChange}
             required
           >
+            <option value="" disabled>
+              Seleccioná una opción
+            </option>
+
             {CASE_TYPES.map((type) => (
               <option key={type} value={type}>
                 {type}
@@ -308,7 +312,7 @@ export default function ContactForm() {
           name="message"
           value={form.message}
           onChange={handleChange}
-          placeholder="Contanos brevemente qué necesitás resolver."
+          placeholder="Contanos qué ocurrió, qué documentación tenés y qué necesitás resolver."
           rows={5}
           required
         />
@@ -323,13 +327,17 @@ export default function ContactForm() {
           type="file"
           multiple
           accept={ATTACHMENTS_CONFIG.ACCEPTED_EXTENSIONS.join(",")}
+          aria-describedby="attachments-help"
           onChange={handleFilesChange}
         />
 
-        <small className="text-sm font-medium leading-6 text-brand-dark/60">
-          Podés adjuntar hasta {ATTACHMENTS_CONFIG.MAX_FILES} archivos PDF, JPG,
-          PNG, DOC o DOCX. Máximo {ATTACHMENTS_CONFIG.MAX_FILE_SIZE_MB} MB por
-          archivo.
+        <small
+          id="attachments-help"
+          className="text-sm font-medium leading-6 text-brand-dark/60"
+        >
+          Opcional. Podés adjuntar hasta {ATTACHMENTS_CONFIG.MAX_FILES} archivos
+          PDF, JPG, PNG, DOC o DOCX. Máximo{" "}
+          {ATTACHMENTS_CONFIG.MAX_FILE_SIZE_MB} MB por archivo.
         </small>
       </label>
 
@@ -347,7 +355,7 @@ export default function ContactForm() {
         </div>
       )}
 
-      <p className="text-sm leading-6 text-brand-dark/65">
+      <p id="privacy-note" className="text-sm leading-6 text-brand-dark/65">
         Al enviar este formulario aceptás ser contactado/a por el estudio para
         evaluar tu consulta. No compartas información extremadamente sensible si
         todavía no fue solicitada.
@@ -357,17 +365,19 @@ export default function ContactForm() {
         className="justify-self-start rounded-full bg-brand-dark px-8 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-surface transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream disabled:cursor-not-allowed disabled:opacity-65"
         type="submit"
         disabled={isSubmitting}
+        aria-describedby="privacy-note"
       >
         {isSubmitting ? "Enviando consulta..." : "Enviar consulta"}
       </button>
 
       {feedback && (
         <p
-          className={`rounded-2xl px-4 py-3 text-sm font-semibold leading-6 ${status === FORM_STATUS.SUCCESS
-            ? "bg-emerald-900/10 text-emerald-800"
-            : "bg-red-900/10 text-red-800"
-            }`}
-          role="status"
+          className={`rounded-2xl px-4 py-3 text-sm font-semibold leading-6 ${
+            status === FORM_STATUS.SUCCESS
+              ? "bg-emerald-900/10 text-emerald-800"
+              : "bg-red-900/10 text-red-800"
+          }`}
+          role={status === FORM_STATUS.ERROR ? "alert" : "status"}
           aria-live="polite"
         >
           {feedback}
