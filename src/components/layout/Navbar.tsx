@@ -41,7 +41,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="hidden shrink-0 rounded-full bg-brand-dark px-7 py-3 text-xs font-bold uppercase tracking-[0.16em] text-brand-surface transition duration-300 hover:-translate-y-0.5 hover:bg-brand-dark/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream md:inline-flex"
         >
-          Consultar
+          WhatsApp
         </a>
 
         <MobileMenu />
