@@ -11,8 +11,8 @@ interface FooterLink {
 const footerLinks: FooterLink[] = [
   { label: "Inicio", href: "/" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Método", href: "#metodo" },
-  { label: "Preguntas frecuentes", href: "#faq" },
+  { label: "Como Trabajamos", href: "#metodo" },
+  { label: "Preguntas", href: "#preguntas" },
   { label: "Consulta online", href: "#contacto" },
 ];
 
