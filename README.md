@@ -3,9 +3,31 @@
 ````md
 # Estudio Jurídico Lachat — Next.js Landin
 
+# Estudio Jurídico Lachat — Next.js Landing
 
-![home](image.png)
+<!-- Badges del Stack Tecnológico -->
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
+</div>
 
+<br />
+
+<!-- Imagen de previsualización centrada -->
+<div align="center">
+  <img src="./public/home.png" alt="Vista previa de la Landing Page del Estudio Lachat" width="800" />
+</div>
+
+<br />
+
+Landing page comercial para **Estudio Jurídico Lachat**, migrada desde Vite/React hacia **Next.js App Router**, con foco en SEO técnico, performance, accesibilidad, estructura escalable y conversión mediante formulario de contacto, WhatsApp y carga de documentación.
+
+El sitio mantiene una estética **Boutique Legal Premium**: editorial, cálida, sobria y profesional, con identidad visual basada en azul petróleo, dorado editorial, fondos crema y tipografía serif para encabezados.
+
+---
 Landing page comercial para **Estudio Jurídico Lachat**, migrada desde Vite/React hacia **Next.js App Router**, con foco en SEO técnico, performance, accesibilidad, estructura escalable y conversión mediante formulario de contacto, WhatsApp y carga de documentación.
 
 El sitio mantiene una estética **Boutique Legal Premium**: editorial, cálida, sobria y profesional, con identidad visual basada en azul petróleo, dorado editorial, fondos crema y tipografía serif para encabezados.
