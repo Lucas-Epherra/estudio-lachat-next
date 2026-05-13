@@ -1,9 +1,7 @@
 # `README.md`
 
 ````md
-# Estudio Jurídico Lachat — Next.js Landing
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2f2cf678-da2e-4732-9d77-6ebaceb6ba1f" />
+# Estudio Jurídico Lachat — Next.js Landin
 
 
 Landing page comercial para **Estudio Jurídico Lachat**, migrada desde Vite/React hacia **Next.js App Router**, con foco en SEO técnico, performance, accesibilidad, estructura escalable y conversión mediante formulario de contacto, WhatsApp y carga de documentación.
