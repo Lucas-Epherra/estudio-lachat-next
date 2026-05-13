@@ -3,6 +3,8 @@
 ````md
 # Estudio Jurídico Lachat — Next.js Landing
 
+![home](image.png)
+
 Landing page comercial para **Estudio Jurídico Lachat**, migrada desde Vite/React hacia **Next.js App Router**, con foco en SEO técnico, performance, accesibilidad, estructura escalable y conversión mediante formulario de contacto, WhatsApp y carga de documentación.
 
 El sitio mantiene una estética **Boutique Legal Premium**: editorial, cálida, sobria y profesional, con identidad visual basada en azul petróleo, dorado editorial, fondos crema y tipografía serif para encabezados.
