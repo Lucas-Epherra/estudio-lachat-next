@@ -39,7 +39,7 @@ export default function Approach() {
             Prevención jurídica con lenguaje claro.
           </h2>
 
-          <p className="mt-6 max-w-md text-sm leading-8 text-brand-cream/70">
+          <p className="text-copy mt-6 max-w-md text-brand-cream/70">
             Un acompañamiento legal pensado para anticipar riesgos, ordenar
             documentación y tomar decisiones con respaldo profesional.
           </p>
@@ -58,7 +58,7 @@ export default function Approach() {
                 0{index + 1}
               </p>
 
-              <p className="mt-5 text-sm leading-7 text-brand-cream/75">
+              <p className="text-copy-sm mt-5 text-brand-cream/75">
                 {item.text}
               </p>
             </article>

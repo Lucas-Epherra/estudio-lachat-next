@@ -27,7 +27,7 @@ export default function FAQItem({ item }: FAQItemProps) {
         </span>
       </summary>
 
-      <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-dark/75">
+      <p className="text-copy-sm mt-4 max-w-2xl text-brand-dark/75">
         {item.a}
       </p>
     </details>

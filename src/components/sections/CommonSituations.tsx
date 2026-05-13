@@ -29,7 +29,7 @@ export default function CommonSituations() {
             avanzar.
           </h2>
 
-          <p className="mt-6 max-w-xl text-base leading-8 text-brand-dark/75 md:text-lg">
+          <p className="text-copy-lg mt-6 max-w-xl text-brand-dark/75">
             Un contrato mal revisado o una intimación mal planteada puede generar
             más problemas que soluciones. La prevención legal suele ser más
             simple, más rápida y más económica que corregir el conflicto después.
@@ -53,7 +53,7 @@ export default function CommonSituations() {
                       {situation.title}
                     </h3>
 
-                    <p className="mt-3 max-w-2xl text-base leading-7 text-brand-dark/75">
+                    <p className="text-copy-sm mt-3 max-w-2xl text-brand-dark/75">
                       {situation.text}
                     </p>
                   </div>

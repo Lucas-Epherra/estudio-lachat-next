@@ -27,7 +27,7 @@ export default function FAQ() {
             Dudas comunes antes de contratar.
           </h2>
 
-          <p className="mt-6 max-w-md text-sm leading-8 text-brand-dark/70">
+          <p className="text-copy mt-6 max-w-md text-brand-dark/70">
             Información clara para tomar decisiones con menos incertidumbre y
             mayor respaldo jurídico.
           </p>

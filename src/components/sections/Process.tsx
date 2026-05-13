@@ -28,7 +28,7 @@ export default function Process() {
 
         <CenterDivider />
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-brand-dark/75">
+        <p className="text-copy mx-auto mt-6 max-w-2xl text-brand-dark/75">
           Desde la primera consulta hasta la entrega final, el objetivo es que
           entiendas el estado de tu situación, los riesgos principales y el
           camino legal más conveniente.
@@ -48,7 +48,7 @@ export default function Process() {
               {index + 1}
             </div>
 
-            <p className="mt-6 text-sm leading-7 text-brand-dark/75">
+            <p className="text-copy-sm mt-6 text-brand-dark/75">
               {step.text}
             </p>
           </article>
