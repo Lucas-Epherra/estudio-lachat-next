@@ -26,7 +26,7 @@ export default function Services() {
           Asesoramiento claro para decisiones importantes.
         </h2>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-brand-dark/75 md:text-lg">
+        <p className="text-copy-lg mx-auto mt-6 max-w-2xl text-brand-dark/75">
           Acompañamiento jurídico personalizado para prevenir conflictos,
           ordenar documentación y actuar con firmeza cuando la situación lo
           requiere.

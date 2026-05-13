@@ -20,12 +20,13 @@ export default function About() {
             className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full border border-brand-gold/25"
             aria-hidden="true"
           />
+
           <div
             className="pointer-events-none absolute -bottom-20 -left-20 size-56 rounded-full border border-brand-gold/15"
             aria-hidden="true"
           />
 
-          <p className="relative text-xs font-bold uppercase tracking-[0.28em] text-brand-gold">
+          <p className="text-caption relative font-bold uppercase tracking-[0.28em] text-brand-gold">
             El estudio
           </p>
 
@@ -36,7 +37,7 @@ export default function About() {
             Asesoramiento legal claro, cercano y preventivo.
           </h2>
 
-          <p className="relative mt-6 max-w-2xl text-base leading-8 text-brand-surface/78">
+          <p className="text-copy relative mt-6 max-w-2xl text-brand-surface/78">
             El Estudio Jurídico Lachat acompaña a personas, propietarios,
             inquilinos, profesionales y clientes del ámbito rural en consultas
             vinculadas a contratos, locaciones, arrendamientos, intimaciones y
@@ -50,7 +51,7 @@ export default function About() {
               Un enfoque jurídico sin vueltas innecesarias
             </h3>
 
-            <p className="mt-4 text-base leading-8 text-brand-dark/70">
+            <p className="text-copy mt-4 text-brand-dark/70">
               La prioridad es traducir cada situación a pasos claros: revisar
               documentación, detectar riesgos, ordenar alternativas y definir
               una estrategia posible antes de avanzar.
@@ -63,7 +64,7 @@ export default function About() {
                 Atención remota
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-brand-dark/68">
+              <p className="text-copy-sm mt-3 text-brand-dark/68">
                 Consultas online con posibilidad de adjuntar documentación para
                 analizar el caso con mayor precisión.
               </p>
@@ -74,7 +75,7 @@ export default function About() {
                 Criterio preventivo
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-brand-dark/68">
+              <p className="text-copy-sm mt-3 text-brand-dark/68">
                 Foco en evitar conflictos futuros mediante contratos claros,
                 intimaciones bien redactadas y decisiones documentadas.
               </p>
@@ -83,6 +84,7 @@ export default function About() {
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button href="#contacto">Enviar consulta</Button>
+
             <Button href="#servicios" variant="secondary">
               Ver servicios
             </Button>

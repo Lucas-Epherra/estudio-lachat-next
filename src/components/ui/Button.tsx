@@ -32,9 +32,9 @@ export default function Button({
       href={href}
       target={target}
       rel={rel}
-      className={`inline-flex items-center justify-center rounded-full px-8 py-3.5 text-xs font-bold uppercase tracking-[0.14em] transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream active:scale-95 ${variantClasses}`}
+      className={`inline-flex max-w-full items-center justify-center rounded-full px-6 py-3.5 text-center text-[0.72rem] font-bold uppercase leading-[1.15] tracking-widest transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-cream active:scale-95 sm:px-8 sm:text-[0.76rem] ${variantClasses}`}
     >
-      {children}
+      <span className="min-w-0 wrap-break-word">{children}</span>
     </Link>
   );
 }

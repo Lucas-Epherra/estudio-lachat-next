@@ -11,8 +11,8 @@ interface FooterLink {
 const footerLinks: FooterLink[] = [
   { label: "Inicio", href: "/" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Como Trabajamos", href: "#metodo" },
-  { label: "Preguntas", href: "#preguntas" },
+  { label: "Cómo trabajamos", href: "#metodo" },
+  { label: "Preguntas", href: "#faq" },
   { label: "Consulta online", href: "#contacto" },
 ];
 
@@ -31,21 +31,20 @@ export default function Footer() {
           <div>
             <Logo light size="lg" />
 
-            <p className="mt-6 max-w-md text-base leading-8 text-brand-cream/75">
-              Asesoramiento legal claro, preventivo y personalizado para
-              contratos, locaciones, arrendamientos e intimaciones.
+            <p className="text-copy mt-6 max-w-md text-brand-cream/75">
+              Asesoramiento legal claro, preventivo y personalizado.
             </p>
 
-            <div className="mt-6 flex items-center gap-3 text-sm text-brand-cream/60">
+            <div className="text-copy-sm mt-6 flex items-center gap-3 text-brand-cream/60">
               <span aria-hidden="true" className="text-brand-gold">
                 ◆
               </span>
-              <span>Atención remota · Consultas personalizadas</span>
+              <span>Atención Online · Consultas Personalizadas</span>
             </div>
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-gold">
+            <h2 className="text-caption font-semibold uppercase tracking-[0.22em] text-brand-gold">
               Enlaces
             </h2>
 
@@ -55,7 +54,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-base text-brand-cream/80 transition-colors duration-300 hover:text-brand-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-dark"
+                      className="text-copy-sm text-brand-cream/80 transition-colors duration-300 hover:text-brand-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-dark"
                     >
                       {link.label}
                     </Link>
@@ -66,12 +65,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-brand-gold">
+            <h2 className="text-caption font-semibold uppercase tracking-[0.22em] text-brand-gold">
               Contacto
             </h2>
 
             <address className="mt-6 not-italic">
-              <ul className="space-y-4 text-base leading-7 text-brand-cream/80">
+              <ul className="text-copy-sm space-y-4 text-brand-cream/80">
                 <li>Buenos Aires, Argentina</li>
 
                 <li>
@@ -109,7 +108,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 pt-8 text-sm text-brand-cream/60 md:flex-row md:items-center md:justify-between">
+        <div className="text-caption flex flex-col gap-5 pt-8 text-brand-cream/60 md:flex-row md:items-center md:justify-between">
           <p>© 2026 Estudio Jurídico Lachat. Todos los derechos reservados.</p>
 
           <p>
