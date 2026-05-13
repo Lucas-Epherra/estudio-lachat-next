@@ -592,5 +592,4 @@ Proyecto desarrollado para uso comercial del **Estudio Jurídico Lachat**.
 
 No se recomienda reutilizar la identidad visual, textos comerciales, logo ni automatizaciones asociadas sin autorización.
 
-```
-```
+
