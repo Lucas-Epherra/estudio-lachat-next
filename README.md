@@ -1,6 +1,3 @@
-# `README.md`
-
-````md
 
 # Estudio Jurídico Lachat — Next.js Landing
 
