@@ -1,7 +1,7 @@
 # `README.md`
 
 ````md
-# Estudio Jurídico Lachat — Next.js Landin
+# Estudio Jurídico Lachat — Next.js Landing
 
 # Estudio Jurídico Lachat — Next.js Landing
 
