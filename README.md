@@ -1,11 +1,11 @@
 # `README.md`
 
 ````md
-# Estudio Jurídico Lachat — Next.js Landing
 
 # Estudio Jurídico Lachat — Next.js Landing
 
 <!-- Badges del Stack Tecnológico -->
+
 <div align="center">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
@@ -17,6 +17,7 @@
 <br />
 
 <!-- Imagen de previsualización centrada -->
+
 <div align="center">
   <img src="./public/home.png" alt="Vista previa de la Landing Page del Estudio Lachat" width="800" />
 </div>
