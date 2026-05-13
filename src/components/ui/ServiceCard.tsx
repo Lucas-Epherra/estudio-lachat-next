@@ -38,9 +38,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         {service.title}
       </h3>
 
-      <p className="mt-4 text-base leading-7 text-brand-dark/75">
-        {service.text}
-      </p>
+      <p className="text-copy-sm mt-4 text-brand-dark/75">{service.text}</p>
 
       <div className="mt-8">
         <Button

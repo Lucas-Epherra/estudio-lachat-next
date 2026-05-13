@@ -15,7 +15,7 @@ import OrganicDecor from "../ui/OrganicDecor";
 export default function Hero() {
   const expressItems = [
     "Contratos de locación",
-    "Revisión legal remota",
+    "Revisión legal online",
     "Arrendamientos rurales",
     "Cartas documento",
   ];
@@ -26,7 +26,7 @@ export default function Hero() {
 
       <div className="relative z-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <Label>Contratos, locaciones y consultas legales remotas</Label>
+          <Label>Contratos, locaciones y consultas legales online</Label>
 
           <h1 className="mt-8 max-w-4xl font-serif text-[2.35rem] font-semibold leading-[0.98] tracking-tight text-brand-dark sm:text-5xl lg:text-6xl">
             Asesoramiento legal claro para contratos, locaciones y reclamos.
@@ -34,9 +34,9 @@ export default function Hero() {
 
           <Divider />
 
-          <p className="max-w-2xl text-base leading-8 text-brand-dark/80 md:text-lg">
+          <p className="text-copy max-w-2xl text-brand-dark/80">
             Revisamos, redactamos y ordenamos documentación legal con una mirada
-            preventiva, estratégica y personalizada. Atención remota para
+            preventiva, estratégica y personalizada. Atención online para
             resolver consultas sin necesidad de trasladarte.
           </p>
 
@@ -59,7 +59,7 @@ export default function Hero() {
             </Button>
           </div>
 
-          <p className="mt-5 max-w-xl text-sm leading-6 text-brand-dark/60">
+          <p className="text-copy-sm mt-5 max-w-xl text-brand-dark/60">
             Atención online · Respuesta personalizada · Asesoramiento para
             particulares, propietarios, inquilinos y clientes del ámbito rural.
           </p>
@@ -90,14 +90,14 @@ export default function Hero() {
             <LeafSprig className="-right-5 top-12 h-44 w-24 text-brand-gold/20" />
 
             <div className="relative z-10">
-              <Label dark>Consulta remota</Label>
+              <Label dark>Consulta Online</Label>
 
               <h2 className="mt-8 font-serif text-3xl leading-tight text-brand-surface md:text-4xl">
                 Antes de firmar, reclamar o intimar, asesorate con respaldo
                 profesional.
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-brand-surface/80">
+              <p className="text-copy-sm mt-5 text-brand-surface/80">
                 Enviá tu consulta o documentación y recibí orientación legal
                 clara sobre los próximos pasos.
               </p>
@@ -106,7 +106,7 @@ export default function Hero() {
                 {expressItems.map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-brand-surface/10 bg-brand-surface/5 px-5 py-4 text-sm text-brand-surface/90"
+                    className="text-copy-sm rounded-2xl border border-brand-surface/10 bg-brand-surface/5 px-5 py-4 text-brand-surface/90"
                   >
                     <span className="mr-2 text-brand-gold" aria-hidden="true">
                       ✦

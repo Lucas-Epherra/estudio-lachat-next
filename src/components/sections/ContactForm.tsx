@@ -27,10 +27,11 @@ interface ContactRequestPayload {
   status: string;
 }
 
-const fieldClassName = "grid gap-2 text-sm font-semibold text-brand-dark";
+const fieldClassName =
+  "grid gap-2 text-[0.95rem] font-semibold leading-normal text-brand-dark";
 
 const controlClassName =
-  "w-full rounded-[0.95rem] border border-brand-dark/15 bg-brand-surface px-4 py-3.5 text-brand-dark outline-none transition-colors duration-200 placeholder:text-brand-dark/40 focus:border-brand-gold focus:bg-[#fffdf8] focus-visible:ring-2 focus-visible:ring-brand-gold/30";
+  "w-full rounded-[0.95rem] border border-brand-dark/15 bg-brand-surface px-4 py-3.5 text-base text-brand-dark outline-none transition-colors duration-200 placeholder:text-brand-dark/40 focus:border-brand-gold focus:bg-[#fffdf8] focus-visible:ring-2 focus-visible:ring-brand-gold/30";
 
 /**
  * Formulario real de contacto para Estudio Jurídico Lachat.
@@ -206,10 +207,7 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       noValidate
     >
-      <div
-        className="absolute -left-2499.75 h-px w-px overflow-hidden opacity-0"
-        aria-hidden="true"
-      >
+      <div className="sr-only" aria-hidden="true">
         <label htmlFor="company">Empresa</label>
         <input
           id="company"
@@ -223,7 +221,7 @@ export default function ContactForm() {
       </div>
 
       <div className="grid max-w-2xl gap-2">
-        <p className="text-xs font-bold uppercase tracking-[0.12em] text-brand-gold">
+        <p className="text-caption font-bold uppercase tracking-[0.12em] text-brand-gold">
           Consulta online
         </p>
 
@@ -234,7 +232,7 @@ export default function ContactForm() {
           Dejanos tu consulta y el estudio se comunicará con vos.
         </h2>
 
-        <p className="text-base leading-7 text-brand-dark/70">
+        <p className="text-copy text-brand-dark/70">
           Completá tus datos, describí brevemente la situación y adjuntá
           documentación si ya la tenés disponible.
         </p>
@@ -333,7 +331,7 @@ export default function ContactForm() {
 
         <small
           id="attachments-help"
-          className="text-sm font-medium leading-6 text-brand-dark/60"
+          className="text-copy-sm font-medium text-brand-dark/60"
         >
           Opcional. Podés adjuntar hasta {ATTACHMENTS_CONFIG.MAX_FILES} archivos
           PDF, JPG, PNG, DOC o DOCX. Máximo{" "}
@@ -343,9 +341,9 @@ export default function ContactForm() {
 
       {selectedFiles.length > 0 && (
         <div className="rounded-2xl border border-brand-gold/25 bg-brand-gold/10 p-4 text-brand-dark">
-          <p className="text-sm font-bold">Archivos seleccionados:</p>
+          <p className="text-copy-sm font-bold">Archivos seleccionados:</p>
 
-          <ul className="mt-3 grid gap-2 pl-5 text-sm leading-6 text-brand-dark/75">
+          <ul className="text-copy-sm mt-3 grid gap-2 pl-5 text-brand-dark/75">
             {selectedFiles.map((file) => (
               <li key={`${file.name}-${file.size}-${file.lastModified}`}>
                 {file.name} · {(file.size / 1024 / 1024).toFixed(2)} MB
@@ -355,7 +353,7 @@ export default function ContactForm() {
         </div>
       )}
 
-      <p id="privacy-note" className="text-sm leading-6 text-brand-dark/65">
+      <p id="privacy-note" className="text-copy-sm text-brand-dark/65">
         Al enviar este formulario aceptás ser contactado/a por el estudio para
         evaluar tu consulta. No compartas información extremadamente sensible si
         todavía no fue solicitada.
@@ -372,7 +370,7 @@ export default function ContactForm() {
 
       {feedback && (
         <p
-          className={`rounded-2xl px-4 py-3 text-sm font-semibold leading-6 ${
+          className={`text-copy-sm rounded-2xl px-4 py-3 font-semibold ${
             status === FORM_STATUS.SUCCESS
               ? "bg-emerald-900/10 text-emerald-800"
               : "bg-red-900/10 text-red-800"

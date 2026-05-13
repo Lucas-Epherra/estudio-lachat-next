@@ -1,7 +1,8 @@
 # `README.md`
 
 ````md
-# Estudio Jurídico Lachat — Next.js Landing
+# Estudio Jurídico Lachat — Next.js Landin
+
 
 ![home](image.png)
 
@@ -594,5 +595,4 @@ Proyecto desarrollado para uso comercial del **Estudio Jurídico Lachat**.
 
 No se recomienda reutilizar la identidad visual, textos comerciales, logo ni automatizaciones asociadas sin autorización.
 
-```
-```
+

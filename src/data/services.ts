@@ -19,7 +19,7 @@ export const services: Service[] = [
     title: "Locaciones urbanas",
     text: "Contratos de vivienda, locales, consultorios, oficinas y galpones.",
     icon: "⌂",
-    cta: "Consultar por locación",
+    cta: "Consultar Locación",
     whatsappMessage:
       "Hola, necesito asesoramiento sobre un contrato de locación urbana.",
   },
@@ -28,7 +28,7 @@ export const services: Service[] = [
     title: "Contratos comerciales",
     text: "Cláusulas sobre precio, actualización, garantías, mora y restitución.",
     icon: "◇",
-    cta: "Revisar contrato comercial",
+    cta: "Revisar Contrato",
     whatsappMessage:
       "Hola, necesito revisar o redactar un contrato comercial.",
   },
@@ -37,7 +37,7 @@ export const services: Service[] = [
     title: "Arrendamientos rurales",
     text: "Uso de campo, parcelas, pastoreo, agricultura, mejoras y conservación.",
     icon: "✦",
-    cta: "Consultar por arrendamiento rural",
+    cta: "Consultar Arrendamiento",
     whatsappMessage:
       "Hola, necesito asesoramiento sobre un arrendamiento rural.",
   },
@@ -46,7 +46,7 @@ export const services: Service[] = [
     title: "Intimaciones",
     text: "Cartas documento por falta de pago, daños o incumplimientos.",
     icon: "✉",
-    cta: "Consultar por intimación",
+    cta: "Consultar Intimación",
     whatsappMessage:
       "Hola, necesito consultar por una posible intimación o carta documento.",
   },
