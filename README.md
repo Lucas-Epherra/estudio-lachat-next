@@ -98,7 +98,6 @@ Validado:
 ## Stack técnico
 
 - **Next.js** con App Router.
-- **React**.
 - **TypeScript estricto**.
 - **Tailwind CSS v4**.
 - **Supabase**:
