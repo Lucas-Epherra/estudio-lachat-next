@@ -1,136 +1,121 @@
+# Estudio Jurídico Lachat — Next.js Landing Page
 
-# Estudio Jurídico Lachat — Next.js Landing
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-<!-- Badges del Stack Tecnológico -->
+Commercial landing page for **Estudio Jurídico Lachat**, migrated from Vite/React to **Next.js App Router** with a strong focus on technical SEO, performance, accessibility, scalable frontend architecture and contact conversion through a real contact form, WhatsApp integration and document upload support.
 
-<div align="center">
-<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-<img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
-</div>
+The website follows a **Boutique Legal Premium** visual identity: editorial, warm, elegant and professional, with a design system based on deep petroleum blue, editorial gold, cream backgrounds and serif typography for headings.
 
-<br />
-
-<!-- Imagen de previsualización centrada -->
-
-<div align="center">
-<img src="./public/home.png" alt="Vista previa de la Landing Page del Estudio Lachat" width="800" />
-</div>
-
-<br />
-
-Landing page comercial para **Estudio Jurídico Lachat**, migrada desde Vite/React hacia **Next.js App Router**, con foco en SEO técnico, performance, accesibilidad, estructura escalable y conversión mediante formulario de contacto, WhatsApp y carga de documentación.
-
-El sitio mantiene una estética **Boutique Legal Premium**: editorial, cálida, sobria y profesional, con identidad visual basada en azul petróleo, dorado editorial, fondos crema y tipografía serif para encabezados.
-
----
-Landing page comercial para **Estudio Jurídico Lachat**, migrada desde Vite/React hacia **Next.js App Router**, con foco en SEO técnico, performance, accesibilidad, estructura escalable y conversión mediante formulario de contacto, WhatsApp y carga de documentación.
-
-El sitio mantiene una estética **Boutique Legal Premium**: editorial, cálida, sobria y profesional, con identidad visual basada en azul petróleo, dorado editorial, fondos crema y tipografía serif para encabezados.
+🌐 **Live website:** https://www.estudiolachat.com.ar/
 
 ---
 
-## Tabla de contenidos
+## Table of contents
 
-- [Descripción](#descripción)
-- [Estado del proyecto](#estado-del-proyecto)
-- [Stack técnico](#stack-técnico)
-- [Funcionalidades principales](#funcionalidades-principales)
-- [Arquitectura](#arquitectura)
+- [Overview](#overview)
+- [Project status](#project-status)
+- [Tech stack](#tech-stack)
+- [Main features](#main-features)
+- [Architecture](#architecture)
 - [Design system](#design-system)
-- [Variables de entorno](#variables-de-entorno)
-- [Instalación local](#instalación-local)
-- [Scripts disponibles](#scripts-disponibles)
-- [Formulario de contacto](#formulario-de-contacto)
-- [Supabase](#supabase)
-- [SEO técnico](#seo-técnico)
-- [Deploy en Vercel](#deploy-en-vercel)
-- [Checklist antes de producción](#checklist-antes-de-producción)
-- [Buenas prácticas aplicadas](#buenas-prácticas-aplicadas)
-- [Autor](#autor)
+- [Environment variables](#environment-variables)
+- [Local installation](#local-installation)
+- [Available scripts](#available-scripts)
+- [Contact form](#contact-form)
+- [Supabase integration](#supabase-integration)
+- [Technical SEO](#technical-seo)
+- [Vercel deployment](#vercel-deployment)
+- [Production checklist](#production-checklist)
+- [Best practices applied](#best-practices-applied)
+- [Author](#author)
+- [License](#license)
 
 ---
 
-## Descripción
+## Overview
 
-Este proyecto es la migración a Next.js de la landing comercial del **Estudio Jurídico Lachat**.
+This project is the Next.js migration of the commercial landing page for **Estudio Jurídico Lachat**.
 
-El objetivo principal es mejorar:
+The main goals were to improve:
 
-- SEO técnico.
+- Technical SEO.
 - Performance.
-- Organización arquitectónica.
-- Escalabilidad del código.
-- Experiencia de usuario.
-- Conversión mediante consultas legales online.
+- Frontend architecture.
+- Code scalability.
+- User experience.
+- Online legal consultation conversion.
 
-La landing está orientada a captar consultas sobre:
+The landing page is focused on generating inquiries related to:
 
-- Contratos.
-- Locaciones urbanas.
-- Arrendamientos rurales.
-- Cartas documento.
-- Reclamos e intimaciones.
-- Consultas legales remotas.
-
----
-
-## Estado del proyecto
-
-Estado actual: **migración funcional completada y deploy inicial validado en Vercel**.
-
-Validado:
-
-- Landing funcional en Next.js.
-- Build de producción correcto.
-- Formulario sin archivo funcionando.
-- Formulario con archivo funcionando.
-- Inserción en Supabase.
-- Carga de archivos en Supabase Storage.
-- Automatización de email funcionando.
-- Registro automático en Google Sheets funcionando.
-- Deploy en Vercel funcionando.
-- SEO base configurado con metadata, sitemap, robots y Open Graph image.
+- Legal contracts.
+- Urban rentals.
+- Rural leases.
+- Legal notices.
+- Claims and formal demands.
+- Remote legal consultations.
 
 ---
 
-## Stack técnico
+## Project status
 
-- **Next.js** con App Router.
-- **TypeScript estricto**.
+Current status: **functional migration completed and production deployment validated on Vercel**.
+
+Validated features:
+
+- Functional landing page built with Next.js.
+- Successful production build.
+- Contact form working without attached files.
+- Contact form working with attached files.
+- Contact request insertion in Supabase.
+- File upload to Supabase Storage.
+- Transactional email automation working.
+- Automatic Google Sheets registration working.
+- Deployment on Vercel working.
+- Base SEO configured with metadata, sitemap, robots and Open Graph image.
+
+---
+
+## Tech stack
+
+- **Next.js** with App Router.
+- **React**.
+- **TypeScript** in strict mode.
 - **Tailwind CSS v4**.
 - **Supabase**:
   - Database.
   - Storage.
   - RLS policies.
-- **Vercel** para deploy.
-- **Google Sheets** mediante automatización externa.
-- **Resend / email automation** mediante flujo conectado al registro de consultas.
+- **Resend** for transactional email automation.
+- **Google Sheets** through an external automation flow.
+- **Vercel** for deployment.
 
 ---
 
-## Funcionalidades principales
+## Main features
 
-- Landing responsive.
-- Navbar sticky.
-- Footer institucional.
-- Logo real del estudio.
-- Botón flotante de WhatsApp.
-- Secciones dinámicas desde `src/data`.
-- Formulario real de contacto.
-- Carga de documentación adjunta.
-- Honeypot anti-spam.
-- Inserción de consultas en Supabase.
-- Storage de archivos legales.
-- Automatización hacia email y Google Sheets.
-- SEO técnico para buscadores y redes sociales.
+- Responsive landing page.
+- Sticky navigation bar.
+- Institutional footer.
+- Real legal studio logo.
+- Floating WhatsApp button.
+- Dynamic sections powered by `src/data`.
+- Real contact form.
+- Attached document upload.
+- Anti-spam honeypot field.
+- Contact request insertion in Supabase.
+- Legal document storage in Supabase Storage.
+- Email and Google Sheets automation.
+- Technical SEO for search engines and social media sharing.
 
 ---
 
-## Arquitectura
+## Architecture
 
-La estructura principal del proyecto sigue separación estricta de responsabilidades.
+The project follows a clear separation of responsibilities.
 
 ```txt
 src/
@@ -188,17 +173,17 @@ src/
 └── utils/
     ├── contactFormValidation.ts
     └── fileHelpers.ts
-````
+```
 
 ---
 
 ## Design system
 
-La identidad visual se basa en una estética **Boutique Legal Premium**.
+The visual identity is based on a **Boutique Legal Premium** aesthetic.
 
-### Colores principales
+### Main colors
 
-Definidos como tokens en Tailwind v4:
+Defined as Tailwind CSS v4 tokens:
 
 ```css
 --color-brand-dark: #082e3a;
@@ -207,88 +192,88 @@ Definidos como tokens en Tailwind v4:
 --color-brand-surface: #fffaf0;
 ```
 
-### Uso visual
+### Visual usage
 
-* `brand-dark`: textos principales, fondos de contraste, botones primarios.
-* `brand-gold`: acentos, divisores, detalles, estados focus/hover.
-* `brand-cream`: fondo principal cálido.
-* `brand-surface`: tarjetas, inputs y superficies claras.
+- `brand-dark`: primary text, contrast backgrounds and primary buttons.
+- `brand-gold`: accents, dividers, details, focus states and hover states.
+- `brand-cream`: warm main background.
+- `brand-surface`: cards, inputs and light surfaces.
 
-### Tipografía
+### Typography
 
-* Encabezados: serif editorial.
-* Texto general: sans-serif limpia.
-* Estilo general: mucho aire visual, contraste suave, ornamentos botánicos y divisores con rombos.
+- Headings: editorial serif typography.
+- Body text: clean sans-serif typography.
+- General style: spacious layout, soft contrast, botanical ornaments and diamond dividers.
 
 ---
 
-## Variables de entorno
+## Environment variables
 
-El proyecto usa variables públicas de Supabase para operaciones permitidas por RLS desde el frontend.
+The project uses public Supabase variables for frontend operations allowed by RLS policies.
 
-Crear un archivo en la raíz:
+Create a file in the project root:
 
 ```txt
 .env.local
 ```
 
-Con este contenido:
+Add the following variables:
 
-```bash
-NEXT_PUBLIC_SUPABASE_URL="https://TU_PROJECT_ID.supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY="TU_SUPABASE_ANON_KEY"
+```env
+NEXT_PUBLIC_SUPABASE_URL="https://YOUR_PROJECT_ID.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
 ```
 
-No usar claves privadas ni service role en variables `NEXT_PUBLIC_*`.
+Do not expose private keys or service role keys through `NEXT_PUBLIC_*` variables.
 
-Incorrecto:
+Incorrect:
 
-```bash
+```env
 NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY="..."
 ```
 
-Correcto:
+Correct:
 
-```bash
+```env
 NEXT_PUBLIC_SUPABASE_ANON_KEY="..."
 ```
 
 ---
 
-## Instalación local
+## Local installation
 
-Clonar el repositorio:
+Clone the repository:
 
 ```bash
 git clone https://github.com/Lucas-Epherra/estudio-lachat-next.git
 ```
 
-Entrar al proyecto:
+Move into the project directory:
 
 ```bash
 cd estudio-lachat-next
 ```
 
-Instalar dependencias:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Crear `.env.local`:
+Create `.env.local`:
 
-```bash
-NEXT_PUBLIC_SUPABASE_URL="https://TU_PROJECT_ID.supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY="TU_SUPABASE_ANON_KEY"
+```env
+NEXT_PUBLIC_SUPABASE_URL="https://YOUR_PROJECT_ID.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
 ```
 
-Levantar servidor local:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Abrir:
+Open the project locally:
 
 ```txt
 http://localhost:3000
@@ -296,31 +281,31 @@ http://localhost:3000
 
 ---
 
-## Scripts disponibles
+## Available scripts
 
-### Desarrollo
+### Development
 
 ```bash
 npm run dev
 ```
 
-Levanta el proyecto en modo desarrollo.
+Starts the project in development mode.
 
-### Build de producción
+### Production build
 
 ```bash
 npm run build
 ```
 
-Compila el proyecto para producción.
+Builds the project for production.
 
-### Servidor de producción local
+### Local production server
 
 ```bash
 npm run start
 ```
 
-Ejecuta el build de producción localmente.
+Runs the production build locally.
 
 ### Lint
 
@@ -328,41 +313,41 @@ Ejecuta el build de producción localmente.
 npm run lint
 ```
 
-Ejecuta validaciones de lint si el script está configurado en `package.json`.
+Runs lint validations if the script is configured in `package.json`.
 
 ---
 
-## Formulario de contacto
+## Contact form
 
-El formulario está ubicado en:
+The contact form is located at:
 
 ```txt
 src/components/sections/ContactForm.tsx
 ```
 
-Es el único bloque principal que requiere `"use client"` porque gestiona:
+It is the only main block that requires `"use client"` because it handles:
 
-* Estado del formulario.
-* Submit.
-* Archivos seleccionados.
-* Validación.
-* Feedback de éxito/error.
-* Carga a Supabase Storage.
-* Inserción en Supabase Database.
+- Form state.
+- Submit flow.
+- Selected files.
+- Validation.
+- Success and error feedback.
+- Uploads to Supabase Storage.
+- Insertions into Supabase Database.
 
-### Campos
+### Fields
 
-* Nombre y apellido.
-* Email.
-* Teléfono / WhatsApp.
-* Tipo de consulta.
-* Mensaje.
-* Documentación adjunta.
-* Honeypot anti-spam.
+- Full name.
+- Email.
+- Phone / WhatsApp.
+- Case type.
+- Message.
+- Attached documentation.
+- Anti-spam honeypot.
 
-### Tipos de consulta
+### Case types
 
-Definidos en:
+Defined in:
 
 ```txt
 src/constants/contactForm.ts
@@ -379,25 +364,25 @@ export const CASE_TYPES = [
 ] as const;
 ```
 
-Estos valores deben coincidir con el `CHECK constraint` definido en Supabase para la columna `case_type`.
+These values must match the `CHECK constraint` defined in Supabase for the `case_type` column.
 
 ---
 
-## Supabase
+## Supabase integration
 
-El proyecto usa Supabase para:
+The project uses Supabase to:
 
-* Guardar consultas en la tabla `contact_requests`.
-* Subir documentos al bucket `legal-documents`.
-* Conservar rutas de archivos en `file_paths`.
+- Store contact requests in the `contact_requests` table.
+- Upload legal documents to the `legal-documents` bucket.
+- Store uploaded file paths in `file_paths`.
 
-### Tabla esperada
+### Expected table
 
 ```txt
 contact_requests
 ```
 
-Columnas utilizadas:
+Columns used by the frontend:
 
 ```txt
 submission_id
@@ -411,29 +396,29 @@ file_paths
 status
 ```
 
-### Bucket esperado
+### Expected bucket
 
 ```txt
 legal-documents
 ```
 
-Los archivos se guardan bajo la ruta:
+Files are stored under the following path:
 
 ```txt
 consultas/{submissionId}/{index}-{fileName}
 ```
 
-Ejemplo:
+Example:
 
 ```txt
-consultas/550e8400-e29b-41d4-a716-446655440000/1-contrato.pdf
+consultas/550e8400-e29b-41d4-a716-446655440000/1-contract.pdf
 ```
 
-Esta ruta debe coincidir con la policy RLS configurada en Supabase Storage.
+This path must match the RLS policy configured in Supabase Storage.
 
-### Restricciones de adjuntos
+### Attachment restrictions
 
-Definidas en:
+Defined in:
 
 ```txt
 src/constants/contactForm.ts
@@ -447,33 +432,33 @@ ACCEPTED_EXTENSIONS: [".pdf", ".jpg", ".jpeg", ".png", ".doc", ".docx"]
 
 ---
 
-## SEO técnico
+## Technical SEO
 
-La configuración SEO global está centralizada en:
+The global SEO configuration is centralized in:
 
 ```txt
 src/config/site.ts
 ```
 
-Y se aplica desde:
+And applied from:
 
 ```txt
 src/app/layout.tsx
 ```
 
-Incluye:
+It includes:
 
-* Title.
-* Description.
-* Keywords.
-* Canonical.
-* Open Graph.
-* Twitter Card.
-* Favicon.
-* Apple icon.
-* Metadata base.
+- Title.
+- Description.
+- Keywords.
+- Canonical URL.
+- Open Graph metadata.
+- Twitter Card metadata.
+- Favicon.
+- Apple icon.
+- Metadata base.
 
-### Rutas SEO generadas
+### Generated SEO routes
 
 ```txt
 /robots.txt
@@ -481,7 +466,7 @@ Incluye:
 /og-lachat.png
 ```
 
-Archivos relacionados:
+Related files:
 
 ```txt
 src/app/robots.ts
@@ -491,33 +476,33 @@ public/og-lachat.png
 
 ---
 
-## Deploy en Vercel
+## Vercel deployment
 
-El proyecto está preparado para deploy en Vercel.
+The project is ready to be deployed on Vercel.
 
-### Variables requeridas en Vercel
+### Required Vercel variables
 
-En:
+Go to:
 
 ```txt
 Project → Settings → Environment Variables
 ```
 
-Agregar:
+Add:
 
-```bash
+```env
 NEXT_PUBLIC_SUPABASE_URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY
 ```
 
-Scopes recomendados:
+Recommended scopes:
 
 ```txt
 Production
 Preview
 ```
 
-### Configuración recomendada
+### Recommended configuration
 
 ```txt
 Framework Preset: Next.js
@@ -526,91 +511,85 @@ Install Command: npm install
 Output Directory: Default
 ```
 
-### Dominio
+### Production domain
 
-Dominio final previsto:
+Final production domain:
 
 ```txt
 https://www.estudiolachat.com.ar
 ```
 
-Antes de apuntar el dominio real, validar:
+Before pointing the real domain, validate:
 
-* Deploy preview.
-* Formulario sin archivo.
-* Formulario con archivo.
-* Email.
-* Google Sheets.
-* Supabase Storage.
-* SEO routes.
-* Mobile.
+- Preview deployment.
+- Contact form without files.
+- Contact form with files.
+- Email delivery.
+- Google Sheets registration.
+- Supabase Storage upload.
+- SEO routes.
+- Mobile layout.
 
 ---
 
-## Checklist antes de producción
+## Production checklist
 
-Antes de conectar el dominio real:
+Before connecting the real domain:
 
 ```txt
-[ ] npm run build correcto
-[ ] Home carga correctamente
-[ ] Logo carga en desktop y mobile
-[ ] Navbar responsive correcto
-[ ] Footer responsive correcto
-[ ] Floating WhatsApp no tapa contenido crítico
-[ ] Formulario sin archivo funciona
-[ ] Formulario con archivo funciona
-[ ] Registro aparece en Supabase
-[ ] Archivo aparece en legal-documents/consultas
-[ ] Email llega correctamente
-[ ] Google Sheets se actualiza
-[ ] /robots.txt funciona
-[ ] /sitemap.xml funciona
-[ ] /og-lachat.png funciona
-[ ] Preview validado en mobile 320px
-[ ] Preview validado en mobile 425px
-[ ] Preview validado en desktop
+[ ] npm run build passes successfully
+[ ] Home page loads correctly
+[ ] Logo loads correctly on desktop and mobile
+[ ] Responsive navbar works correctly
+[ ] Responsive footer works correctly
+[ ] Floating WhatsApp button does not cover critical content
+[ ] Contact form without files works
+[ ] Contact form with files works
+[ ] Contact request appears in Supabase
+[ ] Uploaded file appears in legal-documents/consultas
+[ ] Email is delivered correctly
+[ ] Google Sheets registration is updated
+[ ] /robots.txt works
+[ ] /sitemap.xml works
+[ ] /og-lachat.png works
+[ ] Preview validated at 320px mobile width
+[ ] Preview validated at 425px mobile width
+[ ] Preview validated on desktop
 ```
 
 ---
 
-## Buenas prácticas aplicadas
+## Best practices applied
 
-* Server Components por defecto.
-* Client Component solo para formulario interactivo.
-* TypeScript estricto.
-* Interfaces y tipos explícitos.
-* JSDoc en componentes y lógica relevante.
-* Separación de datos y vista.
-* Configuración centralizada.
-* Diseño responsive.
-* HTML semántico.
-* Accesibilidad con labels, aria-labels y focus states.
-* Honeypot anti-spam.
-* Variables de entorno seguras.
-* Rutas SEO nativas del App Router.
-* Deploy preview antes de producción.
-
----
-
-## Autor
-
-Desarrollado por:
-
-**Lucas Epherra**
-
-Portfolio:
-
-```txt
-https://lucasepherra.com.ar/
-```
+- Server Components by default.
+- Client Component only for the interactive contact form.
+- Strict TypeScript.
+- Explicit interfaces and types.
+- JSDoc in relevant components and logic.
+- Clear separation between data and UI.
+- Centralized configuration.
+- Responsive design.
+- Semantic HTML.
+- Accessibility with labels, `aria-labels` and visible focus states.
+- Anti-spam honeypot.
+- Safe environment variable handling.
+- Native App Router SEO routes.
+- Deployment preview before production.
 
 ---
 
-## Licencia
+## Author
 
-Proyecto desarrollado para uso comercial del **Estudio Jurídico Lachat**.
+Developed by **Lucas Epherra**.
 
-No se recomienda reutilizar la identidad visual, textos comerciales, logo ni automatizaciones asociadas sin autorización.
+- Portfolio: https://www.lucasepherra.com.ar/
+- GitHub: https://github.com/Lucas-Epherra
+- LinkedIn: https://www.linkedin.com/in/lucas-epherra
 
+---
 
+## License
+
+This project was developed for commercial use by **Estudio Jurídico Lachat**.
+
+The visual identity, commercial copy, logo and related automation flows should not be reused without authorization.
