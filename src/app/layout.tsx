@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import StructuredData from "@/components/seo/StructuredData";
 import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import { siteConfig } from "@/config/site";
 
@@ -66,13 +67,15 @@ interface RootLayoutProps {
  * Layout raíz de la aplicación.
  *
  * Define la estructura persistente del sitio con navegación, contenido principal,
- * botón flotante de WhatsApp y footer institucional. También concentra la
- * metadata SEO global de la landing.
+ * datos estructurados, botón flotante de WhatsApp y footer institucional.
+ * También concentra la metadata SEO global de la landing.
  */
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es">
+    <html lang="es-AR">
       <body className="min-h-screen bg-brand-cream text-brand-dark antialiased">
+        <StructuredData />
+
         <Navbar />
 
         {children}
