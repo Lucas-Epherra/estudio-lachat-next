@@ -3,10 +3,10 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 
 /**
- * Genera el archivo robots.txt del sitio.
+ * Define las reglas de rastreo para buscadores.
  *
- * Permite indexación general y declara la ubicación del sitemap para facilitar
- * el rastreo por motores de búsqueda.
+ * Permite indexar el sitio completo y declara la ubicación del sitemap generado
+ * por Next.js para mejorar la descubribilidad de la landing.
  */
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -3,10 +3,10 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 
 /**
- * Genera el sitemap XML de la landing.
+ * Genera el sitemap XML del sitio.
  *
- * Actualmente el sitio tiene una única URL pública principal. Si más adelante
- * se agregan páginas internas, deben sumarse acá con su prioridad y frecuencia.
+ * Al tratarse de una landing institucional de una sola página, se expone la URL
+ * principal como entrada prioritaria para facilitar el rastreo por buscadores.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
