@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
   light?: boolean;
   size?: "sm" | "md" | "lg";
   href?: string;
+  preload?: boolean;
 }
 
 /**
@@ -17,6 +19,7 @@ export default function Logo({
   light = false,
   size = "md",
   href = "/",
+  preload = false,
 }: LogoProps) {
   const eyebrowColor = light ? "text-brand-cream/65" : "text-brand-dark/55";
   const titleColor = light ? "text-brand-cream" : "text-brand-dark";
@@ -25,18 +28,21 @@ export default function Logo({
   const sizeClasses = {
     sm: {
       mark: "h-10 w-10",
+      imageSize: "40px",
       eyebrow: "text-[7px]",
       title: "text-[1.05rem]",
       gap: "gap-2",
     },
     md: {
       mark: "h-11 w-11",
+      imageSize: "44px",
       eyebrow: "text-[9px]",
       title: "text-xl",
       gap: "gap-3",
     },
     lg: {
       mark: "h-12 w-12",
+      imageSize: "48px",
       eyebrow: "text-[10px]",
       title: "text-2xl",
       gap: "gap-3",
@@ -45,6 +51,7 @@ export default function Logo({
     NonNullable<LogoProps["size"]>,
     {
       mark: string;
+      imageSize: string;
       eyebrow: string;
       title: string;
       gap: string;
@@ -63,12 +70,13 @@ export default function Logo({
         aria-hidden="true"
         className={`relative grid ${selectedSize.mark} place-items-center overflow-hidden rounded-full border border-brand-gold/50 ${markBackground}`}
       >
-        <img
+        <Image
           src="/images/brand/logo-lachat.jpeg"
           alt=""
-          className="h-full w-full rounded-full object-cover"
-          loading="eager"
-          decoding="async"
+          fill
+          sizes={selectedSize.imageSize}
+          preload={preload}
+          className="rounded-full object-cover"
         />
 
         <span className="absolute -right-1 -top-1 text-[10px] text-brand-gold">
